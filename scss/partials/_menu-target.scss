@@ -1,0 +1,34 @@
+
+.menu-target {
+	width:24px;
+	height:24px;
+	line {
+		transition:transform 0.2s $standardCurve;
+		stroke:#FFF;
+		stroke-width:3px;
+	}
+
+	line:first-of-type {
+		transform-origin:0 0;
+	}
+	line:nth-of-type(2) {
+		transform-origin:50% 50%;
+		transform:scale(0);
+	}
+	line:last-of-type {
+		transform-origin:0 100%;
+	}
+
+	&:not(.active) {
+		line:first-of-type {
+			transform:rotate(-45deg) translate(-8px, 2px);
+		}
+		line:nth-of-type(2) {
+			transform:scale(1);
+		}
+		line:last-of-type {
+			transform:rotate(45deg) translate(-12px, -2px);
+		}
+
+	}
+}
