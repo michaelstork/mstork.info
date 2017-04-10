@@ -11,6 +11,7 @@
   "author": "Michael Stork",
   "license": "UNLICENSED",
   "devDependencies": {
+    "aos": "^2.1.1",
     "css-loader": "^0.26.2",
     "extract-text-webpack-plugin": "^2.0.0",
     "file-loader": "^0.10.1",

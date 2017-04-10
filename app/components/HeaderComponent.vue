@@ -1,7 +1,7 @@
 
 <template>
 	<header>
-        <menu-target :active="menuActive" v-on:toggle="menuActive = !menuActive"></menu-target>
+		<menu-target :active="menuActive" v-on:toggle="menuActive = !menuActive"></menu-target>
         <slot></slot>
 	</header>
 </template>

@@ -1,6 +1,6 @@
 
 <template>
-	<div>
+	<div class="wrapper">
 		<header-component>
 			<h1>
 				<span class="name">Michael Stork</span>
@@ -17,18 +17,35 @@
 				</a>
 			</div>
 		</header-component>
+		<div class="page-content">
+			<projects-list :projects="projects" :active-project-index="activeProjectIndex" v-on:setActiveProject="setActiveProject"></projects-list>
+			<project v-if="activeProjectIndex !== null" :project="projects[activeProjectIndex]"></project>
+		</div>
 	</div>
 </template>
 
 <script>
 	import HeaderComponent from './HeaderComponent.vue';
+	import ProjectsListComponent from './ProjectsList.vue';
+	import ProjectComponent from './Project.vue';
+	import projectsData from '../projects.json';
 
 	export default {
 		data: function () {
-			return {};
+			return {
+				projects: projectsData,
+				activeProjectIndex: null
+			};
+		},
+		methods: {
+			setActiveProject: function (index) {
+				this.activeProjectIndex = index;
+			}
 		},
 		components: {
-			'header-component': HeaderComponent
+			'header-component': HeaderComponent,
+			'projects-list': ProjectsListComponent,
+			'project': ProjectComponent
 		}
 	}
 </script>

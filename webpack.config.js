@@ -1,5 +1,8 @@
 const path = require('path');
-const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+const extractSass = new ExtractTextPlugin('styles.css');
+const extractCss = new ExtractTextPlugin('aos-styles.css');
 
 module.exports = {
 	entry: './app/index.js',
@@ -11,10 +14,49 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.scss$/,
-				use: ExtractTextPlugin.extract({
+				test: /\.css$/,
+				use: extractCss.extract({
 					fallback: 'style-loader',
-					use: ['css-loader', 'postcss-loader', 'sass-loader']
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap:true
+							}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								sourceMap:true
+							}
+						},
+					]
+				})
+			},
+			{
+				test: /\.scss$/,
+				use: extractSass.extract({
+					fallback: 'style-loader',
+					use: [
+						{
+							loader: 'css-loader',
+							options: {
+								sourceMap:true
+							}
+						},
+						{
+							loader: 'postcss-loader',
+							options: {
+								sourceMap:true
+							}
+						},
+						{
+							loader: 'sass-loader',
+							options: {
+								sourceMap:true
+							}
+						}
+					]
 				})
 			},
 			{
@@ -28,6 +70,7 @@ module.exports = {
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin('styles.css')
+		extractCss,
+		extractSass,
 	],
 };

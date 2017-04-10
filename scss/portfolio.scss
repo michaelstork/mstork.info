@@ -7,10 +7,114 @@
 
 @import 'partials/header';
 
-html, body {
+html {
 	height:100%;
 }
 
 body {
+	min-height:100%;
 	font-family:'Asap','Helvetica','Arial',sans-serif;
+	display:flex;
+	flex-direction:column;
+}
+
+body > .wrapper {
+	display:flex;
+	flex-direction:column;
+	flex:1 0 auto;
+}
+
+.page-content {
+	display:flex;
+	flex:1 0 auto;
+
+	@include queryWidth(max, 768px) {
+		flex-direction:column;
+	}
+}
+
+.projects-list {
+	background-color:$dark;
+	display:flex;
+	flex-direction:column;
+
+	@include queryWidth(min, 1025px) {
+		padding:64px 0;
+		flex:0 0 400px;
+	}
+	@include queryWidth(max, 1024px) {
+		padding:48px 0;
+		flex:0 0 auto;
+	}
+	@include queryWidth(max, 768px) {
+		flex-direction:row;
+		padding:0;
+		overflow-x:auto;
+		overflow-y:hidden;
+	}
+
+}
+
+.project-item {
+	color:#FFF;
+	cursor:pointer;
+	position:relative;
+	z-index:1;
+
+	@include queryWidth(max, 768px) {
+		flex:0 0 auto;
+	}
+}
+
+.project-item-content {
+	background-color:transparent;
+	transition:background-color 0.35s $standardCurve;
+
+	@include queryWidth(min, 1025px) {
+		padding:48px;
+	}
+	@include queryWidth(max, 1024px) {
+		padding:32px;
+	}
+	
+	@include queryWidth(min, 769px) {
+		&:hover {
+			background-color:lighten($dark, 5%);
+		}
+	}
+}
+
+.project-item a {
+	-webkit-font-smoothing:antialiased;
+	color:#FFF;
+	transition:color 0.35s $standardCurve;
+
+	@include queryWidth(min, 1025px) {
+		font-size:1.2em;
+	}
+	@include queryWidth(max, 1024px) {
+		font-size:0.9em;
+	}
+}
+
+@include queryWidth(min, 769px) {
+	.project-item:hover a {
+		color:$accent;
+	}
+}
+
+.project-item .project-item-tech {
+	text-transform:uppercase;
+	color:#BBB;
+
+	@include queryWidth(min, 1025px) {
+		font-size:0.65em;
+	}
+	@include queryWidth(max, 1024px) {
+		font-size:0.5em;
+	}
+}
+
+.project-item-details {
+	flex:0 0 auto;
 }

@@ -1,0 +1,50 @@
+[
+	{
+		"title": "60 Second Soapbox",
+		"url": "https://60secondsoapbox.io",
+		"details": "About 60 Second Soapbox....",
+		"tech": [
+			"VueJs", "Laravel", "WebRTC"
+		]
+	},
+	{
+		"title": "Westin CLE Art Tour",
+		"url": null,
+		"details": "About Westin App....",
+		"tech": [
+			"Vanilla JS", "Cordova", "Sass"
+		]
+	},
+	{
+		"title": "Iris",
+		"url": "http://irisapp.io",
+		"details": "About Iris....",
+		"tech": [
+			"Angular", "PHP", "Sass"
+		]
+	},
+	{
+		"title": "Inline",
+		"url": "http://inlineapp.io",
+		"details": "About Inline....",
+		"tech": [
+			"Angular", "PHP", "Sass"
+		]
+	},
+	{
+		"title": "Zenuworld",
+		"url": null,
+		"details": "About Zenuworld....",
+		"tech": [
+			"Angular", "PHP", "Sass"
+		]
+	},
+	{
+		"title": "MSPsych",
+		"url": "http://mspsych.mssm.edu",
+		"details": "About MSPsych....",
+		"tech": [
+			"PHP", "Sass", "JQuery"
+		]
+	}
+]

@@ -11,10 +11,10 @@ header {
 	align-items:flex-start;
 
 	@include queryWidth(min, 769px) {
-		height:160px;
+		flex:0 0 56px;
 	}
 	@include queryWidth(max, 768px) {
-		height:100px;
+		flex:0 0 100px;
 		justify-content:flex-start;
 		flex-direction:column;
 	}
@@ -88,7 +88,7 @@ header h1 span {
 }
 
 .contact-info i {
-	color:#00BCD4;
+	color:$accent;
 	font-size:130%;
 	position:relative;
 	top:2px;
