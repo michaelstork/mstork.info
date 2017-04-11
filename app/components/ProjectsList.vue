@@ -22,7 +22,7 @@
 	import aosStyles from '../../node_modules/aos/dist/aos.css';
 	
 	export default {
-		props: ['projects'],
+		props: ['projects', 'active-project-index'],
 		mounted: function () {
 			aos.init({
 				disable: 'mobile'

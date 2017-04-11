@@ -1,4 +1,3 @@
-@import 'menu-target';
 
 header {
 	background-color:#000;
@@ -20,24 +19,15 @@ header {
 	}
 }
 
-header .menu-target {
-	position:absolute;
-	top:18px;
-	left:18px;
-	cursor:pointer;	
-}
-
 header h1 {
 	font-size:0.8em;
+	cursor:pointer;
 	margin:0;
 	text-transform:uppercase;
 	line-height:1.8em;
 
-	@include queryWidth(min, 769px) {
-		padding-left:64px;
-	}
 	@include queryWidth(max, 768px) {
-		padding-left:40px;
+		padding-left:0;
 	}
 }
 
