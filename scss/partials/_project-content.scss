@@ -20,7 +20,6 @@
 	position:relative;
 	flex:0 0 100%;
 	font-size:0.85em;
-	line-height:2.2em;
 	color:#444;
 
 	@include queryWidth(min, 1025px) {
@@ -104,7 +103,15 @@
 }
 
 .project-intro,
-.project-summary {
+.project-details {
+	p {
+		line-height:2.2em;
+	}
+
+	a {
+		color:$accent;
+		text-decoration:underline;
+	}
 
 	p + p {
 		margin-top:24px;

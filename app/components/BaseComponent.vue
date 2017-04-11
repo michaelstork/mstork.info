@@ -1,7 +1,12 @@
 
 <template>
 	<div class="wrapper">
-		<main-header></main-header>
+		<main-header>
+			<h1 v-on:click="activeProjectIndex = null">
+				<span class="name">Michael Stork</span>
+				<span class="title">Developer</span>
+			</h1>
+		</main-header>
 		<div class="page-content">
 			<projects-list
 				:projects="projects"

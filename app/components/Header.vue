@@ -1,9 +1,6 @@
 <template>
 	<header>
-		<h1 v-on:click="activeProjectIndex = null">
-			<span class="name">Michael Stork</span>
-			<span class="title">Developer</span>
-		</h1>
+		<slot></slot>
 		<div class="contact-info">
 			<a class="email" href="mailto:michael@mstork.info">
 				<i class="mdi mdi-email"></i>
@@ -19,6 +16,6 @@
 
 <script>
 	export default {
-		
+
 	}
 </script>
