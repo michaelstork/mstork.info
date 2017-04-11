@@ -1,0 +1,142 @@
+
+.project-content-container {
+	background-color:#222;
+	display:flex;
+
+	@include queryWidth(min, 1301px) {
+		padding:48px;
+	}
+	@include queryWidth(max, 1300px) {
+		padding:32px;
+	}
+	@include queryWidth(max, 768px) {
+		padding:18px;
+		flex:1 0 auto;
+	}
+}
+
+.project-content {
+	background-color:#FFF;
+	position:relative;
+	flex:0 0 100%;
+	font-size:0.85em;
+	line-height:2.2em;
+	color:#444;
+
+	@include queryWidth(min, 1025px) {
+		padding:48px;
+	}
+	@include queryWidth(max, 1024px) {
+		padding:32px;
+	}
+	@include queryWidth(max, 768px) {
+		padding:32px 18px;
+	}
+}
+
+.project-header {
+	display:flex;
+	margin-bottom:32px;
+	min-height:36px;
+
+	@include queryWidth(min, 601px) {
+		justify-content:space-between;
+		align-items:center;
+	}
+	@include queryWidth(max, 600px) {
+		flex-direction:column;
+	}
+}
+
+.project-header h2 {
+	@include queryWidth(min, 1025px) {
+		font-size:2rem;
+	}
+	@include queryWidth(max, 1024px) {
+		font-size:1.6rem;
+	}
+	@include queryWidth(max, 768px) {
+		font-size:1.4rem;
+	}	
+	@include queryWidth(max, 600px) {
+		margin-bottom:32px;
+	}
+}
+
+.project-header button {
+	-webkit-appearance:none;
+	outline:none;
+	border:none;
+	background-color:$accent;
+	border-radius:18px;
+	height:36px;
+
+	i {
+		margin-right:4px;
+	}
+
+	a {
+		color:#FFF;
+		display:block;
+		font-size:0.75rem;
+		height:36px;
+		line-height:32px;
+		text-align:center;
+		padding:0 32px;
+	}
+}
+
+.project-intro,
+.project-summary {
+
+	p + p {
+		margin-top:24px;
+	}
+}
+
+.project-screenshots {
+	background-color:#FAFAFA;
+	margin:48px 0;
+	display:flex;
+	align-items:center;
+	padding:18px;
+
+	@include queryWidth(max, 1300px) {
+		justify-content:space-between;
+	}
+
+	div {
+		background-repeat:no-repeat;
+		background-position:center;
+		background-size:cover;
+		cursor:pointer;
+		
+		@include queryWidth(min, 1301px) {
+			flex:0 0 120px;
+			padding-bottom:120px;
+			
+			& + div {
+				margin-left:32px;
+			}
+		}
+		@include queryWidth(max, 1300px) {
+			flex:0 0 30%;
+			padding-bottom:30%;
+		}
+		@include queryWidth(max, 768px) {
+
+		}
+	}
+}
+
+.project-header,
+.project-intro,
+.project-screenshots,
+.project-details {
+	transition:opacity 0.3s $sharpCurve;
+
+	.updating & {
+		transition:none !important;
+		opacity:0;
+	}
+}
