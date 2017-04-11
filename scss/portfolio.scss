@@ -54,3 +54,10 @@ body > .wrapper {
 		display:none;
 	}
 }
+
+.image-preload {
+	top:100%;
+	left:-100%;
+	position:absolute;
+	opacity:0;
+}
