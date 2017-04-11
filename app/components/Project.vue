@@ -3,7 +3,10 @@
 	<div class="project-content-container">
 		<div class="project-content" :class="{updating:updating}">
 			<div class="project-header">
-				<h2>{{ project.title }}</h2>
+				<h2>
+					<img v-if="project.icon" :src="iconSrc" />
+					<span>{{ project.title }}</span>
+				</h2>
 				<button v-if="project.url">
 					<a :href="project.url" target="_blank">
 						<i class="mdi mdi-link-variant"></i>
@@ -40,6 +43,9 @@
 				return this.project.url
 					? this.project.url.replace(/https?:\/\//, '')
 					: '';
+			},
+			iconSrc: function () {
+				return '/images/' + this.project.icon;
 			}
 		},
 		watch: {
@@ -47,13 +53,13 @@
 				this.updating = true;
 				setTimeout(() => {
 					this.updating = false;
-				});
+				}, 10);
 			}
 		},
 		mounted: function () {
 			setTimeout(() => {
 				this.updating = false;
-			});
+			}, 10);
 		},
 		methods: {
 			setActiveImage: function (src) {
