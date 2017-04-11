@@ -25,10 +25,11 @@
 					</div>
 					<div class="project-info">
 						<div class="project-intro">
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<p>I'm a web developer living in Denver, Colorado, looking for local opportunities to build awesome things. Currently I have a project in the works for <a href="https://stream9.net">Stream 9</a>, with whom I've worked since 2014. Some of the larger projects I've worked on recently are listed <span class="mobile-only">above</span><span class="desktop-only">to the left</span>; take a look and feel free to get in contact if you have any questions.</p>
+							<p>My skills are mostly centered around front-end development (HTML, CSS, Javscript), although I have extensive experience with PHP and MySQL as well. I'm excited about the current trends in front-end development, from build tools to module systems to the seemingly endless train of new Javascript frameworks. Most recently I've been building things with <a href="https://vuejs.org">VueJs</a>, and I have a few year's worth of experience with <a href="https://angularjs.org">Angular</a> v1 as well. For styling I generally use <a href="http://sass-lang.com/">Sass</a> and <a href="https://github.com/postcss/postcss">PostCSS</a>. For build tools, I'm a huge fan of <a href="https://webpack.github.io/">Webpack</a>.</p>
 						</div>
 						<div class="project-details">
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+	
 						</div>
 					</div>
 				</div>

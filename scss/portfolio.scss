@@ -43,3 +43,14 @@ body > .wrapper {
 .fade-leave-active {
 	opacity:0;
 }
+
+@include queryWidth(min, 769px) {
+	.mobile-only {
+		display:none;
+	}
+}
+@include queryWidth(max, 768px) {
+	.desktop-only {
+		display:none;
+	}
+}
