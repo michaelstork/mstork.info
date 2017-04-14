@@ -12,13 +12,16 @@
 			<div class="panel-container">
 				<div class="panel-content">
 					<transition name="panel" mode="out-in" appear>
-						<router-view :key="$route.fullPath"></router-view>
+						<router-view v-on:setActiveImage="setActiveImage" :key="$route.fullPath"></router-view>
 					</transition>
 				</div>
 			</div>
 		</div>
 		<transition name="fade">
-			<image-viewer v-if="activeImage" :image="activeImage" v-on:close="setActiveImage(null)"></image-viewer>
+			<image-viewer v-if="activeImage"
+				:image="activeImage"
+				v-on:close="setActiveImage(null)">
+			</image-viewer>
 		</transition>
 	</div>
 </template>

@@ -27,6 +27,7 @@
 			<div class="panel-screenshots">
 				<div v-for="image in project.screenshots"
 					:style="'background-image:url(/images/thumbnails/'+ image +')'"
+					v-on:click="setActiveImage(image)"
 					v-image-loader="'/images/thumbnails/'+image">
 				</div>	
 			</div>
@@ -65,6 +66,9 @@
 		methods: {
 			findProject: function (slug) {
 				return projects.find(project => project.slug === slug);
+			},
+			setActiveImage: function (src) {
+				this.$emit('setActiveImage', src);
 			}
 		},
 		directives: {
