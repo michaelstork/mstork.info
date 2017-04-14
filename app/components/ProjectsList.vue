@@ -3,35 +3,34 @@
 		<div class="project-item"
 			v-for="(project, p) in projects"
 			:key="project.title"
-			v-on:click="setActiveProject(p)"
 			data-aos="fade-up"
 			data-aos-easing="ease-out-sine"
 			data-aos-duration="500"
 			data-aos-once="true"
 			:data-aos-delay="p * 100">
-			<div class="project-item-content">
-				<a v-on:click.prevent="setActiveProject(p)">{{ project.title }}</a>
+			<router-link tag="div" class="project-item-content"
+				:to="'/projects/' + project.slug">
+				<h2>{{ project.title }}</h2>
 				<p class="project-item-tech">{{ project.tech.join(', ') }}</p>
-			</div>
+			</router-link>
 		</div>
 	</div>
 </template>
 
 <script>
 	import aos from 'aos';
-	import aosStyles from '../../node_modules/aos/dist/aos.css';
-	
+	import data from '../projects.json';
+
 	export default {
-		props: ['projects', 'active-project-index'],
+		data: function () {
+			return {
+				projects: data
+			};
+		},
 		mounted: function () {
 			aos.init({
 				disable: 'mobile'
 			});
-		},
-		methods: {
-			setActiveProject: function (p) {
-				this.$emit('setActiveProject', p);
-			}
 		}
 	}
 </script>

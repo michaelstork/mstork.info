@@ -1,40 +1,71 @@
 
 <template>
-	<div class="project-content-container">
-		<div class="project-content" :class="{updating:updating}">
-			<div class="project-header">
-				<h2>
-					<img v-if="project.icon" :src="iconSrc" />
-					<span>{{ project.title }}</span>
-				</h2>
-				<button v-if="project.url">
-					<a :href="project.url" target="_blank">
-						<i class="mdi mdi-link-variant"></i>
-						<span>{{ displayUrl }}</span>
-					</a>
-				</button>
-			</div>
-			<div class="project-info">
-				<div v-html="project.intro" class="project-intro"></div>
-				<div class="project-screenshots">
-					<div v-for="image in project.screenshots"
-						:style="'background-image:url(/images/'+ image +')'"
-						v-on:click="setActiveImage(image)">
-					</div>
+	<div>
+		<div class="panel-header">
+			<h2>
+				<img v-if="project.icon" :src="'/images/'+project.icon" />
+				<span>{{ project.title }}</span>
+			</h2>
+			<button v-if="project.url">
+				<a :href="project.url" target="_blank">
+					<i class="mdi mdi-link-variant"></i>
+					<span>{{ displayUrl }}</span>
+				</a>
+			</button>
+		</div>
+		<div class="panel-info">
+		
+			<div v-html="project.intro"
+				class="panel-intro"
+				data-aos="fade-left"
+				data-aos-easing="ease-out-sine"
+				data-aos-duration="500"
+				data-aos-once="true"
+				data-aos-delay="100"></div>
+		
+			<div class="panel-screenshots"
+				data-aos="fade-left"
+				data-aos-easing="ease-out-sine"
+				data-aos-duration="500"
+				data-aos-once="true"
+				data-aos-delay="200">
+				<div v-for="image in project.screenshots"
+					:style="'background-image:url(/images/'+ image +')'"
+					v-on:click="setActiveImage(image)">
 				</div>
-				<div v-html="project.details" class="project-details"></div>
 			</div>
+			
+			<div v-html="project.details"
+				class="panel-details"
+				data-aos="fade-left"
+				data-aos-easing="ease-out-sine"
+				data-aos-duration="500"
+				data-aos-once="true"
+				data-aos-delay="300">
+			</div>
+
 		</div>
 	</div>
 </template>
 
 <script>
+	import projects from '../projects.json';
+	import aos from 'aos';
+
 	export default {
-		props: ['project'],
+		props: ['slug'],
 		data: function () {
 			return {
-				updating: true
+				project: this.findProject(this.slug)
 			};
+		},
+		mounted: function () {
+			aos.init();
+		},
+		watch: {
+			'$route': function (to) {
+				this.project = this.findProject(to.params.slug);
+			}
 		},
 		computed: {
 			displayUrl: function () {
@@ -43,25 +74,12 @@
 				return this.project.url
 					? this.project.url.replace(/https?:\/\//, '')
 					: '';
-			},
-			iconSrc: function () {
-				return '/images/' + this.project.icon;
 			}
-		},
-		watch: {
-			project: function () {
-				this.updating = true;
-				setTimeout(() => {
-					this.updating = false;
-				}, 10);
-			}
-		},
-		mounted: function () {
-			setTimeout(() => {
-				this.updating = false;
-			}, 10);
 		},
 		methods: {
+			findProject: function (slug) {
+				return projects.find(project => project.slug === slug);
+			},
 			setActiveImage: function (src) {
 				this.$emit('setActiveImage', src);
 			}

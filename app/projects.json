@@ -1,6 +1,7 @@
 [
 	{
 		"title": "60 Second Soapbox",
+		"slug": "60-second-soapbox",
 		"url": "https://60secondsoapbox.io",
 		"icon": "soapbox-logo.png",
 		"tech": [
@@ -16,6 +17,7 @@
 	},
 	{
 		"title": "Westin CLE Art Tour",
+		"slug": "westin",
 		"url": "https://play.google.com/store/apps/details?id=com.westin.arttour&hl=en&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
 		"urlTitle": "Google Play",
 		"icon": "westin-logo.png",
@@ -32,6 +34,7 @@
 	},
 	{
 		"title": "Iris",
+		"slug": "iris",
 		"url": "http://irisapp.io",
 		"icon": "iris-logo.gif",
 		"tech": [
@@ -47,6 +50,7 @@
 	},
 	{
 		"title": "Inline",
+		"slug": "inline",
 		"url": "http://inlineapp.io",
 		"icon": "inline-logo.png",
 		"tech": [
@@ -62,6 +66,7 @@
 	},
 	{
 		"title": "Zenuworld",
+		"slug": "zenuworld",
 		"icon": "zenuworld-logo.png",
 		"tech": [
 			"Angular", "PHP", "Authorize.net"

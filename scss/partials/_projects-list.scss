@@ -51,7 +51,9 @@
 	}
 }
 
-.project-item a {
+.project-item h2 {
+	font-weight:normal;
+	display:inline;
 	-webkit-font-smoothing:antialiased;
 	color:#FFF;
 	position:relative;
@@ -82,7 +84,7 @@
 	transform:none !important;
 	opacity:1 !important;
 
-	a {
+	h2 {
 		color:$accent;
 		&:after {
 			transform:scaleX(1);
@@ -91,7 +93,7 @@
 }
 
 @include queryWidth(min, 769px) {
-	.project-item:hover a {
+	.project-item:hover h2 {
 		color:$accent;
 
 		&:after {

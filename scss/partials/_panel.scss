@@ -1,5 +1,5 @@
 
-.project-content-container {
+.panel-container {
 	background-color:#222;
 	display:flex;
 
@@ -15,7 +15,7 @@
 	}
 }
 
-.project-content {
+.panel-content {
 	background-color:#FFF;
 	position:relative;
 	flex:0 0 100%;
@@ -33,7 +33,7 @@
 	}
 }
 
-.project-header {
+.panel-header {
 	display:flex;
 	margin-bottom:32px;
 	min-height:36px;
@@ -47,7 +47,7 @@
 	}
 }
 
-.project-header h2 {
+.panel-header h2 {
 	display:flex;
 	align-items:center;
 
@@ -79,7 +79,7 @@
 	}
 }
 
-.project-header button {
+.panel-header button {
 	-webkit-appearance:none;
 	outline:none;
 	border:none;
@@ -102,8 +102,8 @@
 	}
 }
 
-.project-intro,
-.project-details {
+.panel-intro,
+.panel-details {
 	p {
 		line-height:2.2em;
 	}
@@ -118,7 +118,7 @@
 	}
 }
 
-.project-screenshots {
+.panel-screenshots {
 	background-color:#FAFAFA;
 	margin:48px 0;
 	display:flex;
@@ -147,20 +147,32 @@
 			flex:0 0 30%;
 			padding-bottom:30%;
 		}
-		@include queryWidth(max, 768px) {
-
-		}
 	}
 }
 
-.project-header,
-.project-intro,
-.project-screenshots,
-.project-details {
-	transition:opacity 0.3s $sharpCurve;
 
-	.updating & {
-		transition:none !important;
-		opacity:0;
+.panel-enter-active,
+.panel-leave-active {
+	transition-property:opacity;
+	transition-timing-function:$standardCurve;
+}
+.panel-enter-active {
+	transition-duration:0.3s;
+}
+.panel-leave-active {
+	transition-duration:0.15s;
+}
+.panel-enter,
+.panel-leave-active {
+	opacity:0;
+}
+
+
+.panel-intro,
+.panel-screenshots,
+.panel-details {
+	&[data-aos=fade-left] {
+		transform:translateX(24px);
 	}
 }
+
