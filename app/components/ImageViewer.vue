@@ -16,7 +16,7 @@
 		props: ['image'],
 		data: function () {
 			return {
-				src: '/images/' + this.image,
+				src: '/images/full/' + this.image,
 				style: 'opacity:0'
 			};
 		},

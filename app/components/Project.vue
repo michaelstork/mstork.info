@@ -2,8 +2,8 @@
 <template>
 	<div>
 		<div class="panel-header">
-			<h2 v-image-loader="'/images/'+project.icon">
-				<div class="project-icon" :style="'background-image:url(/images/'+project.icon+')'">
+			<h2 v-image-loader="'/images/icons/'+project.icon">
+				<div class="project-icon" :style="'background-image:url(/images/icons/'+project.icon+')'">
 				</div>
 				<span>{{ project.title }}</span>
 			</h2>
@@ -26,8 +26,8 @@
 		
 			<div class="panel-screenshots">
 				<div v-for="image in project.screenshots"
-					:style="'background-image:url(/images/'+ image +')'"
-					v-image-loader="'/images/'+image">
+					:style="'background-image:url(/images/thumbnails/'+ image +')'"
+					v-image-loader="'/images/thumbnails/'+image">
 				</div>	
 			</div>
 			
@@ -65,9 +65,6 @@
 		methods: {
 			findProject: function (slug) {
 				return projects.find(project => project.slug === slug);
-			},
-			setActiveImage: function (src) {
-				this.$emit('setActiveImage', src);
 			}
 		},
 		directives: {
