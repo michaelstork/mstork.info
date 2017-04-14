@@ -146,7 +146,7 @@
 		background-position:center;
 		background-size:cover;
 		cursor:pointer;
-		transition:opacity 0.2s $standardCurve;
+		transition:opacity 0.4s $standardCurve;
 		
 		@include queryWidth(min, 1301px) {
 			flex:0 0 120px;
