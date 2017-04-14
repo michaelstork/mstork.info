@@ -41,14 +41,7 @@
 	}
 	@include queryWidth(max, 1024px) {
 		padding:32px;
-	}
-	
-	@include queryWidth(min, 769px) {
-		&:hover,
-		.active-project & {
-			background-color:lighten($dark, 5%);
-		}
-	}
+	}	
 }
 
 .project-item h2 {
@@ -80,28 +73,6 @@
 	}
 }
 
-.project-item.active-project {
-	transform:none !important;
-	opacity:1 !important;
-
-	h2 {
-		color:$accent;
-		&:after {
-			transform:scaleX(1);
-		}
-	}
-}
-
-@include queryWidth(min, 769px) {
-	.project-item:hover h2 {
-		color:$accent;
-
-		&:after {
-			transform:scaleX(1);
-		}
-	}
-}
-
 .project-item .project-item-tech {
 	text-transform:uppercase;
 	color:#BBB;
@@ -113,3 +84,36 @@
 		font-size:0.5em;
 	}
 }
+
+
+
+
+/**
+ * Hover/Active
+ */
+
+ @include queryWidth(min, 769px) {
+ 	.project-item:hover .project-item-content,
+ 	.project-item-content.router-link-active {
+ 		background-color:lighten($dark, 5%);
+
+ 		h2 {
+ 			color:$accent;
+ 			&:after {
+ 				transform:scaleX(1);
+ 			}	
+ 		}
+ 	}
+
+ 	.projects-list:hover .project-item:not(:hover) .project-item-content.router-link-active {
+ 		background-color:$dark;
+
+ 		h2 {
+ 			color:#FFF;
+
+ 			&:after {
+ 				transform:scaleX(0);
+ 			}
+ 		}
+ 	}
+ }
