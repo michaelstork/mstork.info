@@ -1,6 +1,7 @@
 
 import '../scss/portfolio.scss';
 import '../node_modules/aos/dist/aos.css';
+import aos from 'aos';
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 
@@ -9,6 +10,7 @@ Vue.use(VueRouter);
 import BaseComponent from './components/Base.vue';
 import AboutComponent from './components/About.vue';
 import ProjectComponent from './components/Project.vue';
+
 
 const router = new VueRouter({
 	mode: 'history',
@@ -40,6 +42,9 @@ new Vue({
 				props: {}
 			}
 		);
+	},
+	mounted: function () {
+		aos.init({});
 	},
 	components: {
 		'base-component': BaseComponent,

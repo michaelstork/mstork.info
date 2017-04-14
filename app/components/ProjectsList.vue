@@ -18,7 +18,6 @@
 </template>
 
 <script>
-	import aos from 'aos';
 	import data from '../projects.json';
 
 	export default {
@@ -26,11 +25,6 @@
 			return {
 				projects: data
 			};
-		},
-		mounted: function () {
-			aos.init({
-				disable: 'mobile'
-			});
 		}
 	}
 </script>

@@ -53,7 +53,6 @@
 
 <script>
 	import projects from '../projects.json';
-	import aos from 'aos';
 	import ImageLoaderDirective from '../directives/image-loader';
 
 	export default {
@@ -62,9 +61,6 @@
 			return {
 				project: this.findProject(this.slug)
 			};
-		},
-		mounted: function () {
-			aos.init();
 		},
 		watch: {
 			'$route': function (to) {
