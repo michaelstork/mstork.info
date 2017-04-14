@@ -108,6 +108,12 @@
 	}
 }
 
+.panel-info {
+	&[data-aos=fade-left] {
+		transform:translateX(18px);
+	}
+}
+
 .panel-intro,
 .panel-details {
 	p {
@@ -172,14 +178,5 @@
 .panel-enter,
 .panel-leave-active {
 	opacity:0;
-}
-
-
-.panel-intro,
-.panel-screenshots,
-.panel-details {
-	&[data-aos=fade-left] {
-		transform:translateX(24px);
-	}
 }
 

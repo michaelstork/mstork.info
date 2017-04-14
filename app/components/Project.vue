@@ -2,10 +2,8 @@
 <template>
 	<div>
 		<div class="panel-header">
-			<h2>
-				<div class="project-icon"
-					v-image-loader="'/images/'+project.icon"
-					:style="'background-image:url(/images/'+project.icon+')'">
+			<h2 v-image-loader="'/images/'+project.icon">
+				<div class="project-icon" :style="'background-image:url(/images/'+project.icon+')'">
 				</div>
 				<span>{{ project.title }}</span>
 			</h2>
@@ -16,36 +14,24 @@
 				</a>
 			</button>
 		</div>
-		<div class="panel-info">
+		<div class="panel-info"
+			data-aos="fade-left"
+			data-aos-easing="ease-out-sine"
+			data-aos-duration="500"
+			data-aos-once="true"
+			data-aos-offset="48"
+			data-aos-delay="100">
 		
-			<div v-html="project.intro"
-				class="panel-intro"
-				data-aos="fade-left"
-				data-aos-easing="ease-out-sine"
-				data-aos-duration="500"
-				data-aos-once="true"
-				data-aos-delay="100"></div>
+			<div v-html="project.intro" class="panel-intro"></div>
 		
-			<div class="panel-screenshots"
-				data-aos="fade-left"
-				data-aos-easing="ease-out-sine"
-				data-aos-duration="500"
-				data-aos-once="true"
-				data-aos-delay="200">
+			<div class="panel-screenshots">
 				<div v-for="image in project.screenshots"
 					:style="'background-image:url(/images/'+ image +')'"
 					v-image-loader="'/images/'+image">
 				</div>	
 			</div>
 			
-			<div v-html="project.details"
-				class="panel-details"
-				data-aos="fade-left"
-				data-aos-easing="ease-out-sine"
-				data-aos-duration="500"
-				data-aos-once="true"
-				data-aos-delay="300">
-			</div>
+			<div v-html="project.details" class="panel-details"></div>
 
 		</div>
 	</div>
