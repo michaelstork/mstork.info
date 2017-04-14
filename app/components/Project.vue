@@ -3,7 +3,10 @@
 	<div>
 		<div class="panel-header">
 			<h2>
-				<img v-if="project.icon" :src="'/images/'+project.icon" />
+				<div class="project-icon"
+					v-image-loader="'/images/'+project.icon"
+					:style="'background-image:url(/images/'+project.icon+')'">
+				</div>
 				<span>{{ project.title }}</span>
 			</h2>
 			<button v-if="project.url">
@@ -31,8 +34,8 @@
 				data-aos-delay="200">
 				<div v-for="image in project.screenshots"
 					:style="'background-image:url(/images/'+ image +')'"
-					v-on:click="setActiveImage(image)">
-				</div>
+					v-image-loader="'/images/'+image">
+				</div>	
 			</div>
 			
 			<div v-html="project.details"
@@ -51,6 +54,7 @@
 <script>
 	import projects from '../projects.json';
 	import aos from 'aos';
+	import ImageLoaderDirective from '../directives/image-loader';
 
 	export default {
 		props: ['slug'],
@@ -83,6 +87,9 @@
 			setActiveImage: function (src) {
 				this.$emit('setActiveImage', src);
 			}
+		},
+		directives: {
+			imageLoader: ImageLoaderDirective
 		}
 	}
 </script>

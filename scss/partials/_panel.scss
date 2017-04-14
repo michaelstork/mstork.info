@@ -51,31 +51,37 @@
 	display:flex;
 	align-items:center;
 
+	.project-icon {
+		margin-right:12px;
+		background-repeat:no-repeat;
+		background-position:center center;
+		background-size:auto 100%;
+		transition:opacity 0.2s $standardCurve;
+	}
+
 	@include queryWidth(min, 1025px) {
 		font-size:2rem;
-		img {
+		.project-icon {
 			height:2rem;
+			width:2rem;
 		}
 	}
 	@include queryWidth(max, 1024px) {
 		font-size:1.6rem;
-		img {
+		.project-icon {
 			height:1.6rem;
+			width:1.6rem;
 		}
 	}
 	@include queryWidth(max, 768px) {
 		font-size:1.4rem;
-		img {
+		.project-icon {
 			height:1.4rem;
+			width:1.4rem;
 		}
 	}	
 	@include queryWidth(max, 600px) {
 		margin-bottom:32px;
-	}
-
-	img {
-		width:auto;
-		margin-right:12px;
 	}
 }
 
@@ -134,6 +140,7 @@
 		background-position:center;
 		background-size:cover;
 		cursor:pointer;
+		transition:opacity 0.2s $standardCurve;
 		
 		@include queryWidth(min, 1301px) {
 			flex:0 0 120px;
