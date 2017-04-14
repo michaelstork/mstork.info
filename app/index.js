@@ -19,13 +19,13 @@ const router = new VueRouter({
 	},
 	routes: [
 		{
+			path: '/',
+			component: AboutComponent
+		},
+		{
 			path: '/projects/:slug',
 			component: ProjectComponent,
 			props: true
-		},
-		{
-			path: '/about',
-			component: AboutComponent
 		}
 	]
 });

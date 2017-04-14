@@ -2,7 +2,7 @@
 <template>
 	<div class="wrapper">
 		<main-header>
-			<router-link tag="h1" :to="'/about'">
+			<router-link tag="h1" :to="'/'">
 				<span class="name">Michael Stork</span>
 				<span class="title">Developer</span>
 			</router-link>
