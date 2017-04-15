@@ -170,10 +170,10 @@
 	transition-timing-function:$standardCurve;
 }
 .panel-enter-active {
-	transition-duration:0.3s;
+	transition-duration:0.45s;
 }
 .panel-leave-active {
-	transition-duration:0.15s;
+	transition-duration:0.25s;
 }
 .panel-enter,
 .panel-leave-active {

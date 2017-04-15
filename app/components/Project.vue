@@ -14,16 +14,8 @@
 				</a>
 			</button>
 		</div>
-		<div class="panel-info"
-			data-aos="fade-left"
-			data-aos-easing="ease-out-sine"
-			data-aos-duration="500"
-			data-aos-once="true"
-			data-aos-offset="48"
-			data-aos-delay="100">
-		
-			<div v-html="project.intro" class="panel-intro"></div>
-		
+		<div class="panel-info">
+			<div v-html="project.intro" class="panel-intro"></div>		
 			<div class="panel-screenshots">
 				<div v-for="image in project.screenshots"
 					:style="'background-image:url(/images/thumbnails/'+ image +')'"
@@ -31,9 +23,7 @@
 					v-image-loader="'/images/thumbnails/'+image">
 				</div>	
 			</div>
-			
 			<div v-html="project.details" class="panel-details"></div>
-
 		</div>
 	</div>
 </template>
