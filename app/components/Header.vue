@@ -1,21 +1,19 @@
 <template>
 	<header>
-		<slot></slot>
-		<div class="contact-info">
-			<a class="email" href="mailto:michael@mstork.info">
-				<i class="mdi mdi-email"></i>
-				<span>michael@mstork.info</span>
-			</a>
-			<a class="phone" href="tel:2162238715">
-				<i class="mdi mdi-cellphone-iphone"></i>
-				<span>216.223.8715</span>
-			</a>
+		<div class="header-content-top">
+			<slot name="logo"></slot>
+			<slot name="contact"></slot>
 		</div>
+		<project-nav-indicator class="header-content-bottom"></project-nav-indicator>
 	</header>
 </template>
 
 <script>
-	export default {
+	import ProjectNavIndicatorComponent from './ProjectNavIndicator.vue';
 
+	export default {
+		components: {
+			'project-nav-indicator': ProjectNavIndicatorComponent
+		}
 	}
 </script>

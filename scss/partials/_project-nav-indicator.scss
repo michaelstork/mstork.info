@@ -1,0 +1,43 @@
+$projectNavIndicatorHeight:36px;
+$projectNavIndicatorItemWidth:128px;
+
+.project-nav-indicator {
+	position:relative;
+
+	@include queryWidth(max, 768px) {
+		display:none;
+	}
+}
+
+.project-nav-indicator ul {
+	list-style-type:none;	
+	height:$projectNavIndicatorHeight;
+	display:flex;
+}
+
+.project-nav-indicator li {
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	width:$projectNavIndicatorItemWidth;
+	height:$projectNavIndicatorHeight;
+	cursor:pointer;
+	font-size:0.7rem;
+	color:#999;
+	transition:color 0.2s ease-out;
+
+	&.active,
+	&:hover {
+		color:#FFF;
+	}
+}
+
+.project-nav-indicator .indicator-underline {
+	width:$projectNavIndicatorItemWidth;
+	height:2px;
+	background-color:$accent;
+	position:absolute;
+	bottom:0;
+	left:0;
+	transition:transform 0.45s $easeOutSine;
+}

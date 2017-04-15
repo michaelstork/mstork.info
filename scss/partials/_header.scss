@@ -2,21 +2,33 @@
 header {
 	background-color:#000;
 	box-sizing:border-box;
-	padding:18px;
 	color:#FFF;
 
-	display:flex;
-	justify-content:space-between;
-	align-items:flex-start;
-
 	@include queryWidth(min, 769px) {
-		flex:0 0 56px;
+		flex:0 0 128px;
+		display:flex;
+		flex-direction:column;
+		justify-content:space-between;
 	}
 	@include queryWidth(max, 768px) {
 		flex:0 0 100px;
 		justify-content:flex-start;
 		flex-direction:column;
 	}
+}
+
+.header-content-top {
+	display:flex;
+	justify-content:space-between;
+	align-items:flex-start;
+
+	@include queryWidth(min, 769px) {
+		padding:18px 18px 0 18px;
+	}
+	@include queryWidth(max, 768px) {
+		flex-direction:column;
+		padding:18px;
+	}	
 }
 
 header h1 {
