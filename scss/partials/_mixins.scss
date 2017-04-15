@@ -4,3 +4,20 @@
 	    @content;
 	}
 }
+
+@mixin scrollbar ($size, $foreground, $background) {
+    // ie
+    scrollbar-face-color: $foreground;
+    scrollbar-track-color: $background;
+    // webkit
+    &::-webkit-scrollbar {
+        width:  $size;
+        height: $size;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: $foreground;
+    }
+    &::-webkit-scrollbar-track {
+        background: $background;
+    }
+}
