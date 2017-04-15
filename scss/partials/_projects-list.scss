@@ -3,6 +3,7 @@
 	background-color:$dark;
 	display:flex;
 	flex-direction:column;
+	overflow:hidden;
 
 	@include queryWidth(min, 1301px) {
 		padding:64px 0;
