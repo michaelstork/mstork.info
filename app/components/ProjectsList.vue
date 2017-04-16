@@ -17,11 +17,11 @@
 </template>
 
 <script>
-	import data from '../projects.json';
+	import projectsData from '../data/projects.json';
 
 	export default {
 		data: function () {
-			const projects = data.map(project => {
+			const projects = projectsData.map(project => {
 				return {
 					title: project.title,
 					tech: project.tech.join(', '),

@@ -29,13 +29,13 @@
 </template>
 
 <script>
-	import info from '../info.json';
+	import infoData from '../data/info.json';
 
 	export default {
 		data: function () {
 			return {
-				about: info.about,
-				skills: info.skills
+				about: infoData.about,
+				skills: infoData.skills
 			};
 		}
 	}

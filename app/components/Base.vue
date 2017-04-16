@@ -49,12 +49,12 @@
 	import ProjectsListComponent from './ProjectsList.vue';
 	import ImageViewerComponent from './ImageViewer.vue';
 	import MenuTargetComponent from './MenuTarget.vue';
-	import contact from '../contact.json';
+	import contactData from '../data/contact.json';
 
 	export default {
 		data: function () {
 			return {
-				contact: contact,
+				contact: contactData,
 				activeImage: null,
 				menuActive: false
 			};

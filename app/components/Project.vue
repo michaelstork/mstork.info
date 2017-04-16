@@ -37,7 +37,7 @@
 </template>
 
 <script>
-	import projects from '../projects.json';
+	import projectsData from '../data/projects.json';
 	import ImageLoaderDirective from '../directives/image-loader';
 
 	export default {
@@ -63,14 +63,14 @@
 			}
 		},
 		mounted: function () {
-			const nextProject = projects[projects.indexOf(this.project) + 1];
+			const nextProject = projectsData[projectsData.indexOf(this.project) + 1];
 			this.nextUrl = nextProject
 				? '/projects/' + nextProject.slug
 				: null;
 		},
 		methods: {
 			findProject: function (slug) {
-				return projects.find(project => project.slug === slug);
+				return projectsData.find(project => project.slug === slug);
 			},
 			setActiveImage: function (src) {
 				this.$emit('setActiveImage', src);

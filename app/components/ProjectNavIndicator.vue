@@ -18,12 +18,12 @@
 </template>
 
 <script>
-	import projects from '../projects.json';
+	import projectsData from '../data/projects.json';
 
 	export default {
 		data: function () {
 			return {
-				projectSlugs: projects.map(project => project.slug),
+				projectSlugs: projectsData.map(project => project.slug),
 				activeIndex: null
 			};
 		},
