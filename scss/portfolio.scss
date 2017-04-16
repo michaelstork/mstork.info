@@ -9,6 +9,7 @@
 @import 'partials/image-viewer';
 @import 'partials/projects-list';
 @import 'partials/panel';
+@import 'partials/menu-target';
 
 html {
 	height:100%;
@@ -19,20 +20,80 @@ body {
 	font-family:'Asap','Helvetica','Arial',sans-serif;
 	display:flex;
 	flex-direction:column;
+	background-color:$dark;
+	overflow:hidden;
 }
 
-body > .wrapper {
+body > .scroll-container {
 	display:flex;
 	flex-direction:column;
 	flex:1 0 auto;
+	overflow-y:auto;
+	max-height:100vh;
+
+	&.menu-active {
+		overflow:hidden;
+	}
 }
 
 .page-content {
+	position:relative;
+	z-index:1;
 	display:flex;
 	flex:1 0 auto;
 
 	@include queryWidth(max, 768px) {
 		flex-direction:column;
+	}
+}
+
+nav {
+	background-color:$dark;
+	position:relative;
+	z-index:2;
+
+	@include queryWidth(min, 1301px) {
+		margin:64px 0;
+		flex:0 0 400px;
+	}
+	@include queryWidth(max, 1300px) {
+		margin:48px 0;
+		flex:0 0 auto;
+	}	
+	@include queryWidth(max, 768px) {
+		margin:0;
+		position:absolute;
+		top:0;
+		left:0;
+		width:100vw;
+		height:calc(100vh - 100px);
+		overflow-y:auto;
+
+		transition:transform 0.35s $standardCurve;
+		transform-origin:100% 0;
+		transform:scale(0);
+
+		.menu-active & {
+			transform:scale(1);
+		}
+	}
+}
+
+.panel-container {
+	background-color:#222;
+	display:flex;
+	position:relative;
+	z-index:1;
+
+	@include queryWidth(min, 1301px) {
+		padding:48px;
+	}
+	@include queryWidth(max, 1300px) {
+		padding:32px;
+	}
+	@include queryWidth(max, 768px) {
+		padding:18px;
+		flex:1 0 auto;
 	}
 }
 

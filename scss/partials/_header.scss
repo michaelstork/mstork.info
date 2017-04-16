@@ -21,6 +21,7 @@ header {
 	display:flex;
 	justify-content:space-between;
 	align-items:flex-start;
+	position:relative;
 
 	@include queryWidth(min, 769px) {
 		padding:18px 18px 0 18px;

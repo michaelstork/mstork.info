@@ -1,20 +1,4 @@
 
-.panel-container {
-	background-color:#222;
-	display:flex;
-
-	@include queryWidth(min, 1301px) {
-		padding:48px;
-	}
-	@include queryWidth(max, 1300px) {
-		padding:32px;
-	}
-	@include queryWidth(max, 768px) {
-		padding:18px;
-		flex:1 0 auto;
-	}
-}
-
 .panel-content {
 	background-color:#FFF;
 	position:relative;

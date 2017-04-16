@@ -1,0 +1,43 @@
+
+.menu-target {
+	width:24px;
+	height:24px;
+	cursor:pointer;
+
+	position:absolute;
+	top:18px;
+	right:18px;
+
+	@include queryWidth(min, 769px) {
+		display:none;
+	}
+}
+
+.menu-target line {
+	transition:transform 0.2s $standardCurve;
+	stroke:#FFF;
+	stroke-width:3px;
+
+	&:first-of-type {
+		transform-origin:0 0;
+	}
+	&:nth-of-type(2) {
+		transform-origin:50% 50%;
+		transform:scale(0);
+	}
+	&:last-of-type {
+		transform-origin:0 100%;
+	}
+}
+
+.menu-target:not(.active) line {
+	&:first-of-type {
+		transform:rotate(-45deg) translate(-8px, 2px);
+	}
+	&:nth-of-type(2) {
+		transform:scale(1);
+	}
+	&:last-of-type {
+		transform:rotate(45deg) translate(-12px, -2px);
+	}
+}

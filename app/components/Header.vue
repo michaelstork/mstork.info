@@ -1,6 +1,7 @@
 <template>
 	<header>
 		<div class="header-content-top">
+			<slot name="menu-target"></slot>
 			<slot name="logo"></slot>
 			<slot name="contact"></slot>
 		</div>

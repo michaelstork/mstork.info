@@ -44,7 +44,9 @@ new Vue({
 		);
 	},
 	mounted: function () {
-		aos.init({});
+		aos.init({
+			disable: 'mobile'
+		});
 	},
 	components: {
 		'base-component': BaseComponent,

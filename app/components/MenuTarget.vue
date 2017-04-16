@@ -15,6 +15,11 @@
 <script>
 	export default {
 		props: ['active'],
+		watch: {
+			'$route': function () {
+				if (this.active) this.$emit('toggle');
+			}
+		},
 		methods: {
 			toggle: function () {
 				this.$emit('toggle');

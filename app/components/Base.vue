@@ -1,7 +1,10 @@
 
 <template>
-	<div class="wrapper">
+	<div class="scroll-container" :class="{'menu-active':menuActive}">
 		<main-header>
+			<menu-target slot="menu-target"
+				:active="menuActive"
+				v-on:toggle="menuActive = !menuActive"></menu-target>
 			<router-link tag="h1" :to="'/'" slot="logo">
 				<span class="name">Michael Stork</span>
 				<span class="title">Developer</span>
@@ -18,7 +21,9 @@
 			</div>
 		</main-header>
 		<div class="page-content">
-			<projects-list></projects-list>
+			<nav>
+				<projects-list></projects-list>
+			</nav>
 			<div class="panel-container">
 				<div class="panel-content">
 					<transition name="panel" mode="out-in" appear>
@@ -40,11 +45,13 @@
 	import HeaderComponent from './Header.vue';
 	import ProjectsListComponent from './ProjectsList.vue';
 	import ImageViewerComponent from './ImageViewer.vue';
+	import MenuTargetComponent from './MenuTarget.vue';
 
 	export default {
 		data: function () {
 			return {
-				activeImage: null
+				activeImage: null,
+				menuActive: false
 			};
 		},
 		methods: {
@@ -55,7 +62,8 @@
 		components: {
 			'main-header': HeaderComponent,
 			'projects-list': ProjectsListComponent,
-			'image-viewer': ImageViewerComponent
+			'image-viewer': ImageViewerComponent,
+			'menu-target': MenuTargetComponent
 		}
 	}
 </script>
