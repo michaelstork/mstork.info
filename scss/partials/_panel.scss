@@ -7,13 +7,13 @@
 	color:#444;
 
 	@include queryWidth(min, 1025px) {
-		padding:48px;
+		padding:48px 48px 100px 48px;
 	}
 	@include queryWidth(max, 1024px) {
-		padding:32px;
+		padding:32px 32px 100px 32px;
 	}
 	@include queryWidth(max, 768px) {
-		padding:32px 18px;
+		padding:32px 18px 100px 18px;
 	}
 }
 
@@ -69,35 +69,6 @@
 	}
 }
 
-.panel-header button {
-	-webkit-appearance:none;
-	outline:none;
-	border:none;
-	background-color:$accent;
-	border-radius:18px;
-	height:36px;
-
-	i {
-		margin-right:4px;
-	}
-
-	a {
-		color:#FFF;
-		display:block;
-		font-size:0.75rem;
-		height:36px;
-		line-height:32px;
-		text-align:center;
-		padding:0 32px;
-	}
-}
-
-.panel-info {
-	&[data-aos=fade-left] {
-		transform:translateX(18px);
-	}
-}
-
 .panel-intro,
 .panel-details {
 	p {
@@ -144,6 +115,34 @@
 			flex:0 0 30%;
 			padding-bottom:30%;
 		}
+	}
+}
+
+.panel-next {
+	position:absolute;
+
+	@include queryWidth(min, 1025px) {
+		bottom:48px;
+		right:48px;
+	}
+	@include queryWidth(max, 1024px) {
+		bottom:32px;
+		right:32px;
+	}
+	@include queryWidth(max, 768px) {
+		bottom:32px;
+		right:18px;
+		left:18px;
+
+		button {
+			display:block;
+			margin-left:auto;
+		}
+	}
+	@include queryWidth(max, 600px) {
+		button {
+			width:100%;
+		}	
 	}
 }
 

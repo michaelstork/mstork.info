@@ -25,6 +25,14 @@
 			</div>
 			<div v-html="project.details" class="panel-details"></div>
 		</div>
+		<div v-if="nextUrl" class="panel-next">
+			<button>
+				<router-link :to="nextUrl">
+					<span>Next Project</span>
+					<i class="mdi mdi-chevron-right"></i>
+				</router-link>
+			</button>
+		</div>
 	</div>
 </template>
 
@@ -36,7 +44,8 @@
 		props: ['slug'],
 		data: function () {
 			return {
-				project: this.findProject(this.slug)
+				project: this.findProject(this.slug),
+				nextUrl: null
 			};
 		},
 		watch: {
@@ -52,6 +61,12 @@
 					? this.project.url.replace(/https?:\/\//, '')
 					: '';
 			}
+		},
+		mounted: function () {
+			const nextProject = projects[projects.indexOf(this.project) + 1];
+			this.nextUrl = nextProject
+				? '/projects/' + nextProject.slug
+				: null;
 		},
 		methods: {
 			findProject: function (slug) {

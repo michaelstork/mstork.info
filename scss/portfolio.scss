@@ -52,6 +52,32 @@ body > .scroll-container {
 	}
 }
 
+button {
+	-webkit-appearance:none;
+	outline:none;
+	border:none;
+	background-color:$accent;
+	border-radius:18px;
+	height:36px;
+
+	i:first-child {
+		margin-right:4px;
+	}
+	i:last-child {
+		margin-left:4px;
+	}
+
+	a {
+		color:#FFF;
+		display:block;
+		font-size:0.75rem;
+		height:36px;
+		line-height:32px;
+		text-align:center;
+		padding:0 32px;
+	}
+}
+
 nav {
 	background-color:$dark;
 	position:relative;
