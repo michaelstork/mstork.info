@@ -20,11 +20,13 @@ const router = new VueRouter({
 	routes: [
 		{
 			path: '/',
-			component: AboutComponent
+			component: AboutComponent,
+			name: 'home'
 		},
 		{
 			path: '/projects/:slug',
 			component: ProjectComponent,
+			name: 'projects',
 			props: true
 		}
 	]
