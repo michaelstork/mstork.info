@@ -38,6 +38,18 @@ $projectNavIndicatorItemWidth:128px;
 	background-color:$accent;
 	position:absolute;
 	bottom:0;
-	left:0;
+	left:$projectNavIndicatorItemWidth;
 	transition:transform 0.45s $easeOutSine;
+}
+
+.project-nav-indicator .home-item {
+	
+	i {
+		font-size:1.5em;
+		margin-right:6px;
+	}
+
+	&.active {
+		color:$accent;
+	}
 }

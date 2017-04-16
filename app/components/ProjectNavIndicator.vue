@@ -1,6 +1,10 @@
 <template>
 	<div class="project-nav-indicator">
 		<ul>
+			<router-link tag="li" :to="'/'" class="home-item" :class="{active:$route.name === 'home'}">
+				<i class="mdi mdi-account-box-outline"></i>
+				<span>About</span>
+			</router-link>
 			<router-link tag="li"
 				v-for="(slug, s) in projectSlugs"
 				:to="'/projects/'+slug"

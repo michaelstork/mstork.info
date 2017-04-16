@@ -54,15 +54,18 @@ nav {
 	z-index:2;
 
 	@include queryWidth(min, 1301px) {
-		margin:64px 0;
+		margin:0;
+		padding:64px 0;
 		flex:0 0 400px;
 	}
 	@include queryWidth(max, 1300px) {
-		margin:48px 0;
+		margin:0;
+		padding:48px 0;
 		flex:0 0 auto;
 	}	
 	@include queryWidth(max, 768px) {
 		margin:0;
+		// padding:0;
 		position:absolute;
 		top:0;
 		left:0;
@@ -78,6 +81,43 @@ nav {
 		.menu-active & {
 			transform:scale(1);
 		}
+	}
+}
+
+nav .nav-header-item {
+	font-size:0.8em;
+	text-transform:uppercase;
+	color:#AAA;
+	-webkit-font-smoothing:antialiased;
+
+	@include queryWidth(min, 1025px) {
+		padding:12px 48px;
+	}
+	@include queryWidth(max, 1024px) {
+		padding:12px 32px;
+	}
+}
+
+nav .nav-home-item {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:36px;
+	background-color:lighten($dark, 2.5%);
+	color:#AAA;
+	-webkit-font-smoothing:antialiased;
+	display:flex;
+	align-items:center;
+	box-sizing:border-box;
+	font-size:0.8em;
+	text-transform:uppercase;
+
+	@include queryWidth(min, 1025px) {
+		padding:0 48px;
+	}
+	@include queryWidth(max, 1024px) {
+		padding:0 32px;
 	}
 }
 
