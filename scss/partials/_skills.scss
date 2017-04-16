@@ -2,9 +2,9 @@
 .skills-table {
 	display:flex;
 	position:relative;
-	justify-content:space-between;
 	
 	@include queryWidth(max, 1500px) {
+		justify-content:space-between;
 		flex-wrap:wrap;
 	}
 }
@@ -15,6 +15,10 @@
 	@include queryWidth(min, 1501px) {
 		flex:0 0 23%;
 		max-width:300px;
+
+		& + .skills-table-section {
+			margin-left:2%;
+		}
 	}
 	@include queryWidth(max, 1500px) {
 		flex:0 0 48%;
