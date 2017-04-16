@@ -19,15 +19,15 @@
 
 .panel-header {
 	display:flex;
-	margin-bottom:32px;
-	min-height:36px;
 
 	@include queryWidth(min, 601px) {
 		justify-content:space-between;
 		align-items:center;
+		margin-bottom:32px;
 	}
 	@include queryWidth(max, 600px) {
 		flex-direction:column;
+		margin-bottom:18px;
 	}
 }
 
@@ -65,7 +65,7 @@
 		}
 	}	
 	@include queryWidth(max, 600px) {
-		margin-bottom:32px;
+		margin-bottom:18px;
 	}
 }
 

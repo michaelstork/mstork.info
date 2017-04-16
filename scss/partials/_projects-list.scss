@@ -84,7 +84,7 @@
 		font-size:0.95em;
 	}
 	@include queryWidth(max, 768px) {
-		font-size:1.4em;
+		font-size:1.2em;
 	}
 }
 
@@ -110,9 +110,19 @@
  * Hover/Active
  */
 
+.project-item-content.router-link-active {
+	background-color:lighten($dark, 5%);
+
+	h2 {
+		color:$accent;
+		&:after {
+			transform:scaleX(1);
+		}	
+	}
+}
+
  @include queryWidth(min, 769px) {
- 	.project-item:hover .project-item-content,
- 	.project-item-content.router-link-active {
+ 	.project-item:hover .project-item-content {
  		background-color:lighten($dark, 5%);
 
  		h2 {

@@ -29,6 +29,7 @@ header {
 	@include queryWidth(max, 768px) {
 		flex-direction:column;
 		padding:18px;
+		height:100px;
 	}	
 }
 

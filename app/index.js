@@ -45,7 +45,9 @@ new Vue({
 	},
 	mounted: function () {
 		aos.init({
-			disable: 'mobile'
+			disable: function () {
+				return window.innerWidth < 768;
+			}
 		});
 	},
 	components: {

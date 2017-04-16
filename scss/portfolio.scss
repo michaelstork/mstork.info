@@ -21,18 +21,23 @@ body {
 	display:flex;
 	flex-direction:column;
 	background-color:$dark;
-	overflow:hidden;
+
+	@include queryWidth(max, 768px) {
+		overflow:hidden;
+	}
 }
 
 body > .scroll-container {
 	display:flex;
 	flex-direction:column;
 	flex:1 0 auto;
-	overflow-y:auto;
-	max-height:100vh;
 
-	&.menu-active {
-		overflow:hidden;
+	@include queryWidth(max, 768px) {
+		max-height:100vh;
+		overflow-y:auto;
+		&.menu-active {
+			overflow:hidden;
+		}
 	}
 }
 
