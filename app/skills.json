@@ -1,0 +1,130 @@
+{
+	"sections": [
+		[
+			{
+				"title": "Front-End",
+				"skills": [
+					{
+						"title": "HTML | CSS | Sass",
+						"url": null
+					},
+					{
+						"title": "Javascript (ES6)",
+						"url": null
+					}
+				]
+			},
+			{
+				"title": "Development Tools",
+				"skills": [
+					{
+						"title": "Git",
+						"url": "https://git-scm.com/"
+					},
+					{
+						"title": "Webpack",
+						"url": "https://webpack.github.io/"
+					},
+					{
+						"title": "PostCSS",
+						"url": "https://github.com/postcss/postcss"
+					},
+					{
+						"title": "Gulp",
+						"url": "http://gulpjs.com/"
+					},
+					{
+						"title": "Jasmine",
+						"url": "https://jasmine.github.io/"
+					}
+				]
+			}
+		],
+		[
+			{
+				"title": "Frameworks & Libraries",
+				"skills": [
+					{
+						"title": "VueJs",
+						"url": "https://vuejs.org/"
+					},
+					{
+						"title": "AngularJs",
+						"url": "https://angularjs.org/"
+					},
+					{
+						"title": "Node.js",
+						"url": "https://nodejs.org/en/"
+					},
+					{
+						"title": "jQuery",
+						"url": "https://jquery.com/"
+					}
+				]
+			}
+		],
+		[
+			{
+				"title": "Server Side",
+				"skills": [
+					{
+						"title": "PHP",
+						"url": "http://www.php.net/"
+					},
+					{
+						"title": "MySQL | MariaDB",
+						"url": "https://mariadb.org/"
+					},
+					{
+						"title": "Linux (Ubuntu|Debian|CentOS)",
+						"url": null
+					},
+					{
+						"title": "Apache",
+						"url": "https://httpd.apache.org/"
+					},
+					{
+						"title": "NGINX",
+						"url": "https://www.nginx.com/resources/wiki/"
+					}
+				]
+			},
+			{
+				"title": "Development Tools",
+				"skills": [
+					{
+						"title": "Composer",
+						"url": "https://getcomposer.org/"
+					},
+					{
+						"title": "Vagrant",
+						"url": "https://www.vagrantup.com/"
+					}
+				]
+			}
+		],
+		[
+			{
+				"title": "Frameworks & Libraries",
+				"skills": [
+					{
+						"title": "Laravel",
+						"url": "https://laravel.com/"
+					},
+					{
+						"title": "LiftKit",
+						"url": "https://github.com/liftkit/liftkit"
+					},
+					{
+						"title": "CodeIgniter",
+						"url": "https://codeigniter.com/"
+					},
+					{
+						"title": "PHPUnit",
+						"url": "https://phpunit.de/"
+					}
+				]
+			}
+		]
+	]
+}

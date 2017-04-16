@@ -21,6 +21,10 @@
 	display:flex;
 	margin-bottom:32px;
 
+	& ~ .panel-header {
+		margin-top:48px;
+	}
+
 	@include queryWidth(min, 601px) {
 		justify-content:space-between;
 		align-items:center;

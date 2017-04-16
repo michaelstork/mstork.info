@@ -11,6 +11,7 @@
 @import 'partials/projects-list';
 @import 'partials/panel';
 @import 'partials/menu-target';
+@import 'partials/skills';
 
 html {
 	height:100%;
@@ -65,7 +66,6 @@ nav {
 	}	
 	@include queryWidth(max, 768px) {
 		margin:0;
-		// padding:0;
 		position:absolute;
 		top:0;
 		left:0;
@@ -85,7 +85,8 @@ nav {
 }
 
 nav .nav-header-item {
-	font-size:0.8em;
+	font-size:0.7em;
+	letter-spacing:0.5px;
 	text-transform:uppercase;
 	color:#AAA;
 	-webkit-font-smoothing:antialiased;
