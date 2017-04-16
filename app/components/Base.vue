@@ -1,6 +1,6 @@
 
 <template>
-	<div class="scroll-container" :class="{'menu-active':menuActive}">
+	<div class="page-wrapper" :class="{'menu-active':menuActive}">
 		<main-header>
 			<menu-target slot="menu-target"
 				:active="menuActive"

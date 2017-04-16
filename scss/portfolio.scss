@@ -4,6 +4,7 @@
 @import 'partials/mixins';
 @import 'partials/normalize';
 @import 'partials/mdi';
+@import 'partials/buttons';
 @import 'partials/header';
 @import 'partials/project-nav-indicator';
 @import 'partials/image-viewer';
@@ -21,23 +22,16 @@ body {
 	display:flex;
 	flex-direction:column;
 	background-color:$dark;
-
-	@include queryWidth(max, 768px) {
-		overflow:hidden;
-	}
 }
 
-body > .scroll-container {
+.page-wrapper {
 	display:flex;
 	flex-direction:column;
 	flex:1 0 auto;
 
 	@include queryWidth(max, 768px) {
-		max-height:100vh;
-		overflow-y:auto;
-		-webkit-overflow-scrolling:touch;
-
 		&.menu-active {
+			max-height:100vh;
 			overflow:hidden;
 		}
 	}
@@ -51,34 +45,6 @@ body > .scroll-container {
 
 	@include queryWidth(max, 768px) {
 		flex-direction:column;
-	}
-}
-
-button {
-	-webkit-appearance:none;
-	outline:none;
-	border:none;
-	background-color:$accent;
-	border-radius:18px;
-	height:36px;
-	position:relative;
-
-	i:first-child {
-		margin-right:4px;
-	}
-	i:last-child {
-		margin-left:4px;
-	}
-
-	a {
-		display:flex;
-		align-items:center;
-		justify-content:center;
-		color:#FFF;
-		display:block;
-		font-size:0.75rem;
-		text-align:center;
-		padding:0 32px;
 	}
 }
 
