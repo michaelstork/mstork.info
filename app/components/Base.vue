@@ -22,6 +22,10 @@
 		</main-header>
 		<div class="page-content">
 			<nav>
+				<router-link :to="'/'" class="home-item" :class="{active:$route.name === 'home'}">
+					<i class="mdi mdi-account-box-outline"></i>
+					<span>About</span>
+				</router-link>
 				<div class="nav-header-item">
 					<span>Projects:</span>
 				</div>
@@ -56,7 +60,7 @@
 			return {
 				contact: contactData,
 				activeImage: null,
-				menuActive: false
+				menuActive: true
 			};
 		},
 		methods: {
