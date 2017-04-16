@@ -30,6 +30,10 @@
 .skills-table p {
 	font-size:0.8em;
 
+	&:not(:first-child) {
+		margin-top:24px;
+	}
+
 	@include queryWidth(max, 1300px) {
 		margin:24px 0 8px 0;
 	}
