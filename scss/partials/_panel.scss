@@ -19,7 +19,7 @@
 
 .panel-header {
 	display:flex;
-	margin-bottom:32px;
+	margin-bottom:18px;
 
 	& ~ .panel-header {
 		margin-top:48px;
@@ -67,9 +67,6 @@
 			width:1.4rem;
 		}
 	}	
-	@include queryWidth(max, 600px) {
-		margin-bottom:18px;
-	}
 }
 
 .panel-intro,
