@@ -60,7 +60,7 @@
 			return {
 				contact: contactData,
 				activeImage: null,
-				menuActive: true
+				menuActive: false
 			};
 		},
 		methods: {
