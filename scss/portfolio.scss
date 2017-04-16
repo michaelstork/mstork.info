@@ -69,6 +69,7 @@ nav {
 		width:100vw;
 		height:calc(100vh - 100px);
 		overflow-y:auto;
+		-webkit-overflow-scrolling:touch;
 
 		transition:transform 0.35s $standardCurve;
 		transform-origin:100% 0;
