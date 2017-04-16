@@ -6,17 +6,17 @@
 				:active="menuActive"
 				v-on:toggle="menuActive = !menuActive"></menu-target>
 			<router-link tag="h1" :to="'/'" slot="logo">
-				<span class="name">Michael Stork</span>
-				<span class="title">Developer</span>
+				<span class="name">{{ contact.name }}</span>
+				<span class="title">{{ contact.title }}</span>
 			</router-link>
 			<div class="contact-info" slot="contact">
-				<a class="email" href="mailto:michael@mstork.info">
+				<a class="email" :href="'mailto:'+contact.email">
 					<i class="mdi mdi-email"></i>
-					<span>michael@mstork.info</span>
+					<span>{{ contact.email }}</span>
 				</a>
-				<a class="phone" href="tel:2162238715">
+				<a class="phone">
 					<i class="mdi mdi-cellphone-iphone"></i>
-					<span>216.223.8715</span>
+					<span>{{ contact.phone }}</span>
 				</a>
 			</div>
 		</main-header>
@@ -49,10 +49,12 @@
 	import ProjectsListComponent from './ProjectsList.vue';
 	import ImageViewerComponent from './ImageViewer.vue';
 	import MenuTargetComponent from './MenuTarget.vue';
+	import contact from '../contact.json';
 
 	export default {
 		data: function () {
 			return {
+				contact: contact,
 				activeImage: null,
 				menuActive: false
 			};
