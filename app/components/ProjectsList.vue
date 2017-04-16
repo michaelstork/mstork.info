@@ -8,10 +8,9 @@
 			data-aos-duration="500"
 			data-aos-once="true"
 			:data-aos-delay="p * 100">
-			<router-link tag="div" class="project-item-content"
-				:to="'/projects/' + project.slug">
+			<router-link tag="div" class="project-item-content" :to="project.url">
 				<h2>{{ project.title }}</h2>
-				<p class="project-item-tech">{{ project.tech.join(', ') }}</p>
+				<p class="project-item-tech">{{ project.tech }}</p>
 			</router-link>
 		</div>
 	</div>
@@ -22,8 +21,15 @@
 
 	export default {
 		data: function () {
+			const projects = data.map(project => {
+				return {
+					title: project.title,
+					tech: project.tech.join(', '),
+					url: '/projects/' + project.slug
+				};
+			});
 			return {
-				projects: data
+				projects: projects
 			};
 		}
 	}
