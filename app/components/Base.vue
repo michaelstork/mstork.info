@@ -22,6 +22,9 @@
 		</main-header>
 		<div class="page-content">
 			<nav>
+				<div class="nav-header-item">
+					<span>Projects:</span>
+				</div>
 				<projects-list></projects-list>
 			</nav>
 			<div class="panel-container">
