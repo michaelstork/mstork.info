@@ -1,10 +1,11 @@
 
 .skills-table {
 	display:flex;
+	position:relative;
+	justify-content:space-between;
 	
 	@include queryWidth(max, 1500px) {
 		flex-wrap:wrap;
-		justify-content:space-between;
 	}
 }
 
@@ -14,10 +15,6 @@
 	@include queryWidth(min, 1501px) {
 		flex:0 0 23%;
 		max-width:300px;
-
-		& + .skills-table-section {
-			margin-left:3.33%;
-		}
 	}
 	@include queryWidth(max, 1500px) {
 		flex:0 0 48%;
@@ -29,10 +26,7 @@
 
 .skills-table p {
 	font-size:0.8em;
-
-	&:not(:first-child) {
-		margin-top:24px;
-	}
+	margin-top:24px;
 
 	@include queryWidth(max, 1300px) {
 		margin:24px 0 8px 0;
