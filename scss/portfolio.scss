@@ -53,6 +53,7 @@ nav {
 	background-color:$dark;
 	position:relative;
 	z-index:2;
+	box-sizing:border-box;
 
 	@include queryWidth(min, 1301px) {
 		margin:0;
