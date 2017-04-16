@@ -67,6 +67,9 @@
 			width:1.4rem;
 		}
 	}	
+	@include queryWidth(max, 600px) {
+		margin-bottom:18px;
+	}
 }
 
 .panel-intro,
