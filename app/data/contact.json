@@ -2,5 +2,6 @@
 	"name": "John Doe",
 	"title": "Developer",
 	"email": "john-doe@jdoe.com",
-	"phone": "123.456.7890"
+	"phone": "123.456.7890",
+	"github": "https://github.com/michaelstork/mstork.info"
 }
