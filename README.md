@@ -19,10 +19,10 @@ Install dependences
 npm install
 ```
 
-Rename and edit the following files:
-* /app/data/contact.example.json
-* /app/data/info.example.json
-* /app/data/projects.example.json
+Edit the following files:
+* /app/data/contact.json
+* /app/data/info.json
+* /app/data/projects.json
 
 Run Webpack
 ```bash
