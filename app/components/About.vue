@@ -8,12 +8,10 @@
 		</div>
 		<div class="panel-header">
 			<h2>Technical Skills</h2>
-			<button v-if="contact.github">
-				<a :href="contact.github" target="_blank">
-					<i class="mdi mdi-github-face"></i>
-					<span>GitHub</span>
-				</a>
-			</button>
+			<a v-if="contact.github" :href="contact.github" target="_blank" class="button">
+				<i class="mdi mdi-github-face"></i>
+				<span>GitHub</span>
+			</a>
 		</div>
 		<div class="panel-info">
 			<div class="skills-table">
