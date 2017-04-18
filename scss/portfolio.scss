@@ -130,9 +130,11 @@ nav .home-item {
 
 	@include queryWidth(min, 1301px) {
 		padding:48px;
+		flex:0 0 calc(100% - 400px);
 	}
 	@include queryWidth(max, 1300px) {
 		padding:32px;
+		flex:0 1 auto;
 	}
 	@include queryWidth(max, 768px) {
 		padding:18px;

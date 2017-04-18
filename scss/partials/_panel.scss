@@ -105,7 +105,8 @@
 		background-size:cover;
 		cursor:pointer;
 		transition:opacity 0.4s $standardCurve;
-		
+		min-height:100px;
+
 		@include queryWidth(min, 1301px) {
 			flex:0 0 120px;
 			padding-bottom:120px;
@@ -138,12 +139,12 @@
 		right:18px;
 		left:18px;
 
-		button {
+		.button {
 			margin-left:auto;
 		}
 	}
 	@include queryWidth(max, 600px) {
-		button {
+		.button {
 			width:100%;
 		}	
 	}
