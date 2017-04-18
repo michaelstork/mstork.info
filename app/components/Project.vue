@@ -7,12 +7,10 @@
 				</div>
 				<span>{{ project.title }}</span>
 			</h2>
-			<button v-if="project.url">
-				<a :href="project.url" target="_blank">
-					<i class="mdi mdi-link-variant"></i>
-					<span>{{ displayUrl }}</span>
-				</a>
-			</button>
+			<a :href="project.url" target="_blank" v-if="project.url" class="button">
+				<i class="mdi mdi-link-variant"></i>
+				<span>{{ displayUrl }}</span>
+			</a>
 		</div>
 		<div class="panel-info">
 			<div v-html="project.intro" class="panel-intro"></div>		
@@ -26,12 +24,10 @@
 			<div v-html="project.details" class="panel-details"></div>
 		</div>
 		<div v-if="nextUrl" class="panel-next">
-			<button>
-				<router-link :to="nextUrl">
-					<span>Next Project</span>
-					<i class="mdi mdi-chevron-right"></i>
-				</router-link>
-			</button>
+			<router-link :to="nextUrl" class="button alt-button">
+				<span>Next Project</span>
+				<i class="mdi mdi-chevron-right"></i>
+			</router-link>
 		</div>
 	</div>
 </template>
