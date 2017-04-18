@@ -2,18 +2,18 @@
 	<div>
 		<div class="panel-header">
 			<h2>About</h2>
-			<button v-if="contact.github">
-				<a :href="contact.github" target="_blank">
-					<i class="mdi mdi-github-face"></i>
-					<span>GitHub</span>
-				</a>
-			</button>
 		</div>
 		<div class="panel-info">
 			<div class="panel-intro" v-html="about"></div>
 		</div>
 		<div class="panel-header">
 			<h2>Technical Skills</h2>
+			<button v-if="contact.github">
+				<a :href="contact.github" target="_blank">
+					<i class="mdi mdi-github-face"></i>
+					<span>GitHub</span>
+				</a>
+			</button>
 		</div>
 		<div class="panel-info">
 			<div class="skills-table">
