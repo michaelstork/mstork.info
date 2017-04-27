@@ -40,8 +40,6 @@
 	import infoData from '../data/info.json';
 	import contactData from '../data/contact.json';
 
-	console.log(contactData);
-
 	export default {
 		data: function () {
 			return {
