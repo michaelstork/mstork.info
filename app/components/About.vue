@@ -2,6 +2,10 @@
 	<div>
 		<div class="panel-header">
 			<h2>About</h2>
+			<a v-if="contact.linkedin" :href="contact.linkedin" target="_blank" class="button">
+				<i class="mdi mdi-linkedin-box"></i>
+				<span>LinkedIn</span>
+			</a>
 		</div>
 		<div class="panel-info">
 			<div class="panel-intro" v-html="about"></div>
@@ -35,6 +39,8 @@
 <script>
 	import infoData from '../data/info.json';
 	import contactData from '../data/contact.json';
+
+	console.log(contactData);
 
 	export default {
 		data: function () {
