@@ -40,8 +40,8 @@
 				<ul>
 					<li v-for="item in recommendations">
 						<a :href="item.url" class="recommendation-item" target="_blank">
-							<span class="name">{{ item.name }}</span>
-							<span class="title">{{ item.title }}</span>
+							<span class="name" v-html="item.name"></span>
+							<span class="title" v-html="item.title"></span>
 						</a>
 					</li>
 				</ul>
