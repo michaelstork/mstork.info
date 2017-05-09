@@ -30,7 +30,21 @@
 						</ul>
 					</template>
 				</div>
-
+			</div>
+		</div>
+		<div class="panel-header">
+			<h2>Recommendations</h2>
+		</div>
+		<div class="panel-info">
+			<div class="panel-recommendations">
+				<ul>
+					<li v-for="item in recommendations">
+						<a :href="item.url" class="recommendation-item" target="_blank">
+							<span class="name">{{ item.name }}</span>
+							<span class="title">{{ item.title }}</span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -45,7 +59,8 @@
 			return {
 				contact: contactData,
 				about: infoData.about,
-				skills: infoData.skills
+				skills: infoData.skills,
+				recommendations: infoData.recommendations
 			};
 		}
 	}
