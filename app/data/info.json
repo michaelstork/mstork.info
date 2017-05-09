@@ -93,5 +93,17 @@
 				]
 			}
 		]
+	],
+	"recommendations": [
+		{
+			"name": "First Last",
+			"title": "Owner, Company",
+			"url": "/documents/recommendation.pdf"
+		},
+		{
+			"name": "First Last",
+			"title": "Owner, Company",
+			"url": "/documents/recommendation.pdf"
+		}
 	]
 }
