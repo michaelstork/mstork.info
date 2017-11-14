@@ -1,94 +1,132 @@
 {
-	"about": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>",
+	"about": "<p>I'm a web developer living in Denver, Colorado, looking for local opportunities to build things for the web. Some of the larger projects I've worked on recently are listed in the menu; take a look and feel free to get in contact if you have any questions.</p><p>My skills are mostly centered around front-end development (HTML, CSS, Javascript), although I have extensive experience with PHP, SQL, and other server side technologies as well. In total I've been doing web development for about six years, and I've always enjoyed staying on top of modern technologies to build effective web and mobile applications.</p><p>In the past few months I've done a lot of work with <a href=\"https://vuejs.org\" target=\"_blank\">VueJs</a>, and more recently I've started getting into <a href=\"https://facebook.github.io/react/\" target=\"_blank\">React</a>. This porfolio site is built with VueJs and Sass, but I've also built a <a href=\"https://react.mstork.info\" target=\"_blank\">React version</a> hosted on AWS as a learning exercise. I have several years of experience working with <a href=\"https://angularjs.org\" target=\"_blank\">Angular</a> (v1.x) as well. Look below for a list of some of the technologies I've worked with frequently, but feel free to call or email if you'd like more details, references, or code samples.</p>",
 	"skills": [
 		[
 			{
-				"title": "Skill Type #1",
+				"title": "Front-End",
 				"skills": [
 					{
-						"title": "Skill #1",
+						"title": "HTML | CSS | Sass",
 						"url": null
 					},
 					{
-						"title": "Skill #2",
+						"title": "Javascript (ES6)",
 						"url": null
+					}
+				]
+			},
+			{
+				"title": "Development Tools",
+				"skills": [
+					{
+						"title": "Git",
+						"url": "https://git-scm.com/"
 					},
 					{
-						"title": "Skill #3",
-						"url": null
+						"title": "Webpack",
+						"url": "https://webpack.github.io/"
 					},
 					{
-						"title": "Skill #4",
-						"url": null
+						"title": "PostCSS",
+						"url": "https://github.com/postcss/postcss"
+					},
+					{
+						"title": "Gulp",
+						"url": "http://gulpjs.com/"
+					},
+					{
+						"title": "Jasmine",
+						"url": "https://jasmine.github.io/"
 					}
 				]
 			}
 		],
 		[
 			{
-				"title": "Skill Type #2",
+				"title": "Frameworks & Libraries",
 				"skills": [
 					{
-						"title": "Skill #1",
-						"url": null
+						"title": "VueJs",
+						"url": "https://vuejs.org/"
 					},
 					{
-						"title": "Skill #2",
-						"url": null
+						"title": "React",
+						"url": "https://reactjs.org"
 					},
 					{
-						"title": "Skill #3",
-						"url": null
+						"title": "AngularJs",
+						"url": "https://angularjs.org/"
+					},
+					{
+						"title": "Node.js",
+						"url": "https://nodejs.org/en/"
+					},
+					{
+						"title": "jQuery",
+						"url": "https://jquery.com/"
 					}
 				]
 			}
 		],
 		[
 			{
-				"title": "Skill Type #3",
+				"title": "Server Side",
 				"skills": [
 					{
-						"title": "Skill #1",
+						"title": "PHP",
+						"url": "http://www.php.net/"
+					},
+					{
+						"title": "MySQL | MariaDB",
+						"url": "https://mariadb.org/"
+					},
+					{
+						"title": "Linux (Ubuntu|Debian|CentOS)",
 						"url": null
 					},
 					{
-						"title": "Skill #2",
-						"url": null
+						"title": "Apache",
+						"url": "https://httpd.apache.org/"
 					},
 					{
-						"title": "Skill #3",
-						"url": null
+						"title": "NGINX",
+						"url": "https://www.nginx.com/resources/wiki/"
+					}
+				]
+			},
+			{
+				"title": "Development Tools",
+				"skills": [
+					{
+						"title": "Composer",
+						"url": "https://getcomposer.org/"
 					},
 					{
-						"title": "Skill #4",
-						"url": null
-					},
-					{
-						"title": "Skill #5",
-						"url": null
+						"title": "Vagrant",
+						"url": "https://www.vagrantup.com/"
 					}
 				]
 			}
 		],
 		[
 			{
-				"title": "Skill Type #4",
+				"title": "Frameworks & Libraries",
 				"skills": [
 					{
-						"title": "Skill #1",
-						"url": null
+						"title": "Laravel",
+						"url": "https://laravel.com/"
 					},
 					{
-						"title": "Skill #2",
-						"url": null
+						"title": "LiftKit",
+						"url": "https://github.com/liftkit/liftkit"
 					},
 					{
-						"title": "Skill #3",
-						"url": null
+						"title": "CodeIgniter",
+						"url": "https://codeigniter.com/"
 					},
 					{
-						"title": "Skill #4",
-						"url": null
+						"title": "PHPUnit",
+						"url": "https://phpunit.de/"
 					}
 				]
 			}
@@ -96,14 +134,14 @@
 	],
 	"recommendations": [
 		{
-			"name": "First Last",
-			"title": "Owner, Company",
-			"url": "/documents/recommendation.pdf"
+			"name": "Kirk Miesle",
+			"title": "Owner, Stream 9",
+			"url": "/documents/mstork-kmiesle.docx"
 		},
 		{
-			"name": "First Last",
-			"title": "Owner, Company",
-			"url": "/documents/recommendation.pdf"
+			"name": "Antonia S. New, M.D",
+			"title": "Director of Medical Student Education in Psychiatry,<br>Icahn School of Medicine at Mount Sinai",
+			"url": "/documents/mstork-mssm.pdf"
 		}
 	]
 }
