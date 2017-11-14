@@ -1,5 +1,20 @@
 [
 	{
+		"title": "MSPsych",
+		"slug": "mspsych",
+		"icon": "mssm.png",
+		"tech": [
+			"React", "Laravel"
+		],
+		"screenshots": [
+			"mssm1.jpg",
+			"mssm2.jpg",
+			"mssm3.jpg"
+		],
+		"intro": "<p>The MSPsych project was created to facilitate timely collection of medical student evaluations by the Psychiatry department at the Icahn School of Medicine at Mount Sinai in New York, NY.</p>",
+		"details": "<p>The system is also designed to combat grade inflation and ensure the accuracy of academic evaluations. Program administrators are provided with the means to assign student evaluations to specific doctors, easily view outstanding/completed evaluations and grade inflation statistics, and send reminder emails. Medical professionals are presented with photos of the students they are tasked with evaluating, and are provided with links to the correct evaluation form for each student. Since its implementation, the project has contributed to significantly higher numbers of evaluations being received on time, and has also allowed the department to achieve the lowest rate of grade inflation among clerkship programs in the entire medical school.</p>"
+	},
+	{
 		"title": "60 Second Soapbox",
 		"slug": "60-second-soapbox",
 		"url": "https://60secondsoapbox.io",
